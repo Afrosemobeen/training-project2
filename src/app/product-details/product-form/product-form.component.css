@@ -1,0 +1,32 @@
+.grid {
+  background-color: #8db7bb;
+}
+
+.filling {
+  background-color: #e1f4ed;
+  border: solid black 1px;
+}
+.rang {
+  padding-left: 5px;
+}
+input {
+  width: 96%;
+  margin-left: 2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+textarea {
+  width: 96%;
+  margin-left: 2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+button {
+  background-color: #8db7bb;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+button:hover {
+  background-color: #c1f1f4;
+}

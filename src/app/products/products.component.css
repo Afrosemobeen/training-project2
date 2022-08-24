@@ -1,0 +1,16 @@
+.effects {
+  background-color: #8db7bb;
+}
+
+.mat-grid-tile {
+  background-color: #e1f4ed;
+  border: solid white 2px;
+}
+.example-card {
+  background-color: rgb(179, 225, 209);
+  width: 100%;
+}
+
+.content {
+  padding: 20px;
+}

@@ -1,0 +1,188 @@
+<div class="product-form" *ngIf="productForm && appConstant">
+  <form
+    novalidate
+    (ngSubmit)="onSubmit(productForm.value, productForm.valid)"
+    [formGroup]="productForm"
+  >
+    <div class="grid">
+      <div class="col-12 md:col-6 lg:col-3 sm:flex-nowrap">
+        <div class="filling">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <label class="rang">Title*</label>
+            <br />
+            <input
+              type="text"
+              matInput
+              formControlName="{{ appConstant.forms.product.title }}"
+              placeholder="Title"
+            /><br />
+
+            <small
+              style="color: red"
+              *ngIf="
+                productForm.get('title').invalid &&
+                productForm.get('title').touched
+              "
+            >
+              This field is <strong>required</strong>
+            </small>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 md:col-6 lg:col-3">
+        <div class="filling">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <label class="rang">Description*</label>
+            <br />
+            <textarea
+              type="text"
+              matInput
+              formControlName="{{ appConstant.forms.product.description }}"
+              placeholder="Description"
+            ></textarea>
+            <br />
+            <small
+              style="color: red"
+              *ngIf="
+                productForm.get('description').invalid &&
+                productForm.get('description').touched
+              "
+            >
+              This field is <strong>required</strong>
+            </small>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 md:col-6 lg:col-3">
+        <div class="filling">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <label class="rang">Category*</label>
+            <br />
+            <input
+              type="text"
+              matInput
+              formControlName="{{ appConstant.forms.product.category }}"
+              placeholder="Category"
+            /><br />
+            <small
+              style="color: red"
+              *ngIf="
+                productForm.get('category').invalid &&
+                productForm.get('category').touched
+              "
+            >
+              This field is <strong>required</strong>
+            </small>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 md:col-6 lg:col-3">
+        <div class="filling">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <label class="rang">Price*</label>
+            <br />
+            <input
+              type="text"
+              matInput
+              formControlName="{{ appConstant.forms.product.price }}"
+              placeholder="Price"
+            /><br />
+            <small
+              style="color: red"
+              *ngIf="
+                productForm.get('price').invalid &&
+                productForm.get('price').touched
+              "
+            >
+              This field is <strong>required</strong>
+            </small>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 md:col-6 lg:col-3">
+        <div class="filling">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <label class="rang">Stock*</label>
+            <br />
+            <input
+              type="number"
+              matInput
+              formControlName="{{ appConstant.forms.product.stock }}"
+              placeholder="Stock"
+            /><br />
+            <small
+              style="color: red"
+              *ngIf="
+                productForm.get('stock').invalid &&
+                productForm.get('stock').touched
+              "
+            >
+              This field is <strong>required</strong>
+            </small>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 md:col-6 lg:col-3">
+        <div class="filling">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <label class="rang">Brand*</label>
+            <br />
+            <input
+              type="text"
+              matInput
+              formControlName="{{ appConstant.forms.product.brand }}"
+              placeholder="Brand"
+            /><br />
+            <small
+              style="color: red"
+              *ngIf="
+                productForm.get('brand').invalid &&
+                productForm.get('brand').touched
+              "
+            >
+              This field is <strong>required</strong>
+            </small>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12 md:col-6 lg:col-3">
+        <div class="filling">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <label class="rang">Rating*</label>
+            <br />
+            <input
+              type="number"
+              matInput
+              formControlName="{{ appConstant.forms.product.rating }}"
+              placeholder="Rating"
+            />
+            <br />
+            <small
+              style="color: red"
+              *ngIf="
+                productForm.get('rating').invalid &&
+                productForm.get('rating').touched
+              "
+            >
+              This field is <strong>required</strong>
+            </small>
+            <small
+              style="color: red"
+              *ngIf="
+                productForm.get('rating').invalid &&
+                productForm.get('rating').touched
+              "
+            >
+              The maximum value will be <strong>{{ maxValue }}</strong>
+            </small>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="f-center">
+      <button mat-raised-button type="submit" [disabled]="productForm.invalid">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
